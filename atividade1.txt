@@ -1,0 +1,24 @@
+1.
+SELECT products.product_id , product_name, products.unit_price AS product_price, order_details.unit_price AS order_price, SUM(quantity) AS product_price_quantity, discount
+FROM products
+INNER JOIN order_details ON (products.product_id = order_details.product_id)
+WHERE product_price = order_price
+GROUP BY products.product_id, product_name, product_price,order_price, discount
+ORDER BY product_id;
+
+2.
+SELECT products.product_id , product_name, products.unit_price AS product_price, order_details.unit_price AS order_price, SUM(quantity) AS order_price_quantity, discount
+FROM products
+INNER JOIN order_details ON (products.product_id = order_details.product_id)
+WHERE product_price != order_price
+GROUP BY products.product_id, product_name, product_price,order_price, discount
+ORDER BY product_id;
+
+3.
+select od.order_id idpedido, od.quantity quantidade, p.product_name produto, 
+od.unit_price preco_pedido, p.unit_price preco_tabela, 
+p.unit_price - od.unit_price diferenca, od.discount
+from order_details od , products p
+where od.unit_price < p.unit_price 
+and od.product_id = p.product_id
+order by 6 desc;
