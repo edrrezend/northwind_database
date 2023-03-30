@@ -2,5 +2,6 @@ SELECT employees.employee_id, employees.first_name, SUM(order_details.quantity) 
 FROM employees
 INNER JOIN orders ON employees.employee_id = orders.employee_id
 INNER JOIN order_details ON orders.order_id = order_details.order_id
+WHERE DATE_PART(year, orders.order_date) = 2022
 GROUP BY employees.employee_id, employees.first_name
 ORDER BY sales DESC;
