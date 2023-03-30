@@ -22,6 +22,7 @@ Os números em vermelho podem possuir valores diferentes
 
 ## Atividades realizadas:
 1. Consultas para analisar se houve muitas vendas com valores abaixo do preço. Também analisar a quantidade de vendas ordenadas pela diferença.
+2. Consulta para analisar a quantidade de vendas do vendedor "Robert" em relação aos outros vendedores.
 
 ## Possíveis soluções:
 As soluçôes se encontram nos arquivos "atividade.txt".
