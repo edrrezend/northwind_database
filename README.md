@@ -25,4 +25,4 @@ Os números em vermelho podem possuir valores diferentes
 2. Consulta para analisar a quantidade de vendas do vendedor "Robert" em relação aos outros vendedores.
 
 ## Possíveis soluções:
-As soluçôes se encontram nos arquivos "atividade.txt".
+As soluçôes se encontram nos arquivos "atividade[n].txt".
