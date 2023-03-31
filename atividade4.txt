@@ -1,0 +1,24 @@
+WITH for2020 AS (
+  SELECT suppliers.supplier_id AS id, suppliers.company_name AS fornecedor, SUM(order_details.unit_price * order_details.quantity) AS total_2020
+  FROM suppliers
+  INNER JOIN products ON suppliers.supplier_id = products.supplier_id
+  INNER JOIN order_details ON products.product_id = order_details.product_id
+  INNER JOIN orders ON order_details.order_id = orders.order_id
+  WHERE DATE_PART(year, orders.order_date) = 2020 
+  GROUP BY id, fornecedor
+), for2021 AS (
+  SELECT suppliers.supplier_id AS id, suppliers.company_name AS fornecedor, SUM(order_details.unit_price * order_details.quantity) AS total_2021
+  FROM suppliers
+  INNER JOIN products ON suppliers.supplier_id = products.supplier_id
+  INNER JOIN order_details ON products.product_id = order_details.product_id
+  INNER JOIN orders ON order_details.order_id = orders.order_id
+  WHERE DATE_PART(year, orders.order_date) = 2021
+  GROUP BY id, fornecedor
+), ambos AS (
+  SELECT for2021.id, for2020.fornecedor, ROUND(total_2021 - total_2020, 2) AS resultado
+  FROM for2020
+  INNER JOIN for2021 ON (for2020.id = for2021.id)
+  ORDER BY resultado DESC
+)
+SELECT * 
+FROM ambos;
