@@ -25,6 +25,7 @@ Os números em vermelho podem possuir valores diferentes
 2. Consulta para analisar a quantidade de vendas do vendedor "Robert" em relação aos outros vendedores no ano de 2022.
 3. Consulta para analisar quais os 10 produtos mais caros.
 4. Consulta para analisar o progresso das vendas do ano de 2021 em relação a 2020. Analisar a diferença de vendas por fornecedor, das vendas desses últimos 2 anos.
+5. Consulta para analisar as categorias mais vendidas por ano (2020, 2021 e 2022), porém só listando as 5 maiores de cada ano.
 
 ## Possíveis soluções:
 As soluçôes se encontram nos arquivos "atividade[n].txt".
