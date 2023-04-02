@@ -2,10 +2,10 @@
 
 # Northwind Database Creation and Exploration Project
 
-### Ambiente
+### Environment:
 Northwind database + S3 + Redshift + IAM.
 
-## Etapas do projeto:
+## Project Steps:
 1. Create a cluster on Amazon Redshift.
 2. Create the Northwind database.
 3. Create the database structure by running northwinddl.sql using the Redshift query editor.
@@ -13,23 +13,24 @@ Northwind database + S3 + Redshift + IAM.
 5. Upload the 8 CSV files to an Amazon S3 bucket.
 6. Execute Copy to load data (copy.sql can be used as a template).
 
-#### Observação:
+#### Note:
 The numbers in red may have different values
+
 ![image](https://user-images.githubusercontent.com/124625776/228105376-62baae65-9967-4ee0-960c-fcf6c06de0b4.png)
 
-#### Diagram
+#### Diagram:
 ![image](https://user-images.githubusercontent.com/124625776/228107867-ff39a924-79e1-43a6-a7f3-fee5c4f03e7b.png)
 
 7. Explore the data 
 
-## Atividades realizadas:
+## Activities performed:
 1. Queries to analyze if there were many sales with values below the price. Also analyze the quantity of sales ordered by the difference.
 2. Query to analyze the quantity of sales by the seller "Robert" in relation to the other sellers in the year 2022.
 3. Query to analyze the top 10 most expensive products.
 4. Query to analyze the sales progress of the year 2021 in relation to 2020. Analyze the difference in sales by supplier for these last 2 years.
 5. Query to analyze the top selling categories per year (2020, 2021, and 2022), but only listing the top 5 for each year.
 
-## Possíveis soluções:
+## Possible solutions:
 The solutions are in the "atividade[n].txt" files.
 
 ## (PORTUGUÊS)
